@@ -95,15 +95,10 @@ set_up_commands(void)
 		setup_failed("pathname lacks /");
 		exit(2);
 	}
-	pathlen -= (strlen(last_slash) - 1); /* account for trailing / */
 	last_slash[1] = '\0';
 
-	(void) strncpy(v1_cmd, self_dir, PATH_MAX - 1);
-	v1_cmd[pathlen] = '\0';
-	(void) strncat(v1_cmd, "v1_servicelog", (PATH_MAX - pathlen - 1 ));
-	(void) strncpy(v29_cmd, self_dir, PATH_MAX - 1);
-	v29_cmd[pathlen] = '\0';
-	(void) strncat(v29_cmd, "v29_servicelog", (PATH_MAX - pathlen - 1));
+	(void) snprintf(v1_cmd,  PATH_MAX, "%sv1_servicelog",  self_dir);
+	(void) snprintf(v29_cmd, PATH_MAX, "%sv29_servicelog", self_dir);
 }
 
 static void
