@@ -4,7 +4,7 @@
  */
 
 #ifndef PLATFORM_H
-#define PLARFORM_H
+#define PLATFORM_H
 
 #define PLATFORM_FILE	"/proc/cpuinfo"
 
