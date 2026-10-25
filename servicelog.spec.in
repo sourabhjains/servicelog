@@ -49,6 +49,9 @@ of service operations that have been performed on the system.
 %{__rm} -rf $RPM_BUILD_ROOT
 
 %changelog
+* Sun Oct 25 2026 Vasant Hegde <hegdevasant@inux.vnet.ibm.com> 1.1.16
+- Release test
+
 * Tue Sep 7 2021 Vasant Hegde <hegdevasant@inux.vnet.ibm.com> 1.1.16
 - Code cleanup, minor bug fixes
 
